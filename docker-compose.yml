@@ -2,7 +2,7 @@ services:
     wordpress:
         image: wordpress
         ports:
-            - 8085:80
+            - "${PORT: -8000}:80"
         depends_on:
             - mysql
         environment:
