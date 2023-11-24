@@ -21,3 +21,7 @@ jobs:
       -
         name: Build the Docker image
         run: docker build . --file Dockerfile --tag my-wordpress:$(date + %s)
+      - 
+        name: Sync
+        env:
+          dest: 'localhost:8080'
