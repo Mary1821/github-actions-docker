@@ -11,7 +11,7 @@ services:
             MYSQL_PASSWORD: root
             MYSQL_DB: sd23
         volumes:
-            - ./wordpressvol:/var/www/html
+            - wordpress_data:/var/www/html
         networks:
             searchwork:
                 ipv4_address: "192.168.1.22"
@@ -23,7 +23,7 @@ services:
             MYSQL_DATABASE: sd23
             MYSQL_ROOT_PASSWORD: root
         volumes:
-            - ./mysqlvol:/var/lib/mysql
+            - ./html:/var/lib/mysql
         networks:
             searchwork:
                 ipv4_address: "192.168.1.23"
